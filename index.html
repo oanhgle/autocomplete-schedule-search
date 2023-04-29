@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Auto-Complete Search</title>
+    <script src="./src/js/script.js" type="module" defer></script>
+    <link href="/dist/output.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- APP WRAPPER -->
+    <div class="p-8 py-6 md:p-12 lg:px-16">
+
+      <!-- HEADER -->
+      <header class="mx-auto max-w-lg text-center">
+        <!-- HEADING -->
+        <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
+          Class Auto-complete Search
+        </h2>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+
+        <!-- INPUT -->
+        <section class="mx-auto mt-8 max-w-xl">
+          <!-- INSTRUCTIONS -->
+          <p class="text-gray-500 sm:mt-4 sm:block py-5">
+            Class schedule search based on subject + course number (e.g, 'COP 2510') or course title (e.g, 'Programming Concepts').
+            
+          </p>
+
+          <!-- SEARCH -->
+          <div class="relative py-5">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+              <input type="search" id="default-search" class="input__input block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required>
+          </div>
+        </section>
+
+        <!-- OUTPUT -->
+        <section class="mt-8">
+          <div class="overflow-x-auto relative">
+            <table class="2xl:table-fixed xl:table-fixed lg:table-auto md:table-auto sm:table-auto w-full text-sm text-left font-light border-collapse border">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 border">
+                    <tr>
+                        <th class="w-20 py-3 px-6">
+                          Status
+                        </th>
+                        <th scope="col" class="w-auto py-3 px-6">
+                          Subj
+                        </th>
+                        <th class="w-auto py-3 px-6">
+                          Crs#
+                        </th>
+                        <th class="w-1/5 py-3 px-6">
+                          Title
+                        </th>
+                        <th scope="col" class="w-auto py-3 px-6">
+                          Sec
+                        </th>
+                        <th scope="col" class="w-auto py-3 px-6">
+                          CRN
+                        </th>
+                        <th scope="col" class="w-48 py-3 px-6">
+                          Instructor
+                        </th>
+                        <th scope="col" class="w-auto py-3 px-6">
+                          Seats cap
+                        </th>
+                        <th scope="col" class="w-auto py-3 px-6">
+                          Seats avail
+                        </th>
+                        <th scope="col" class="w-20 py-3 px-6">
+                          Credit
+                        </th>
+                        <th scope="col" class="w-auto py-3 px-6">
+                          Days
+                        </th>
+                        <th scope="col" class="w-1/12 py-3 px-6">
+                          Time
+                        </th>
+                        <th scope="col" class="w-1/12 py-3 px-6">
+                          Location
+                        </th>
+                      </tr>
+                </thead>
+                <tbody class ="output__courses">
+                </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
